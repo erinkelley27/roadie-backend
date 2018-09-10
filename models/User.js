@@ -2,12 +2,13 @@ const mongoose = require('../db/connection')
 const Schema = mongoose.Schema
 
 const User = new Schema({
-  email: String,
   firstName: String,
   lastName: String,
-  hometown: String,
-  state: String,
   image: String,
+  city: String,
+  state: String,
+  recsVisited: Number,
+  email: String,
   password: String
 })
 
