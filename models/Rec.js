@@ -10,7 +10,8 @@ const Rec = new Schema({
   menuItem: String,
   parking: Boolean,
   kids: Boolean,
-  dogs: Boolean
+  dogs: Boolean,
+  type: String
 })
 
 mongoose.model('Rec', Rec)
