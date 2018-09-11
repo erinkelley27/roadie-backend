@@ -71,4 +71,13 @@ router.post('/login', (req, res) => {
   }
 })
 
+// User profile show page
+router.get('/:id', (req, res) => {
+  console.log('user show page is working')
+  User.findById(req.params.id)
+    .then((rec) => {
+      res.json(rec)
+    })
+})
+
 module.exports = router
