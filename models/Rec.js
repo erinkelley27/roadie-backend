@@ -6,6 +6,8 @@ const Rec = new Schema(
     name: String,
     image: String,
     fullAdress: String,
+    lat: Number,
+    lng: Number,
     address: String,
     city: String,
     state: String,
