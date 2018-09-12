@@ -6,6 +6,23 @@ const config = require('../config/config')
 const mongoose = require('../models/User')
 const User = mongoose.model('User')
 
+// List all Users
+router.get('/', (req, res) => {
+  console.log('user list is working')
+  User.find({})
+    .then(users =>
+      res.json(users))
+})
+
+// User profile show page
+router.get('/:id', (req, res) => {
+  console.log('user show page is working')
+  User.findById(req.params.id)
+    .then((rec) => {
+      res.json(rec)
+    })
+})
+
 // User signup
 router.post('/signup', (req, res) => {
   if (req.body.email && req.body.password) {
@@ -69,15 +86,6 @@ router.post('/login', (req, res) => {
   } else {
     res.sendStatus(401)
   }
-})
-
-// User profile show page
-router.get('/:id', (req, res) => {
-  console.log('user show page is working')
-  User.findById(req.params.id)
-    .then((rec) => {
-      res.json(rec)
-    })
 })
 
 module.exports = router
