@@ -18,8 +18,8 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   console.log('user show page is working')
   User.findById(req.params.id)
-    .then((rec) => {
-      res.json(rec)
+    .then((user) => {
+      res.json(user)
     })
 })
 

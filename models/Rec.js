@@ -15,9 +15,9 @@ const Rec = new Schema(
     phone: String,
     website: String,
     menuItem: String,
-    parking: Boolean,
-    kids: Boolean,
-    dogs: Boolean,
+    parking: String,
+    kids: String,
+    dogs: String,
     type: String
   },
   { collection: 'recs' }
