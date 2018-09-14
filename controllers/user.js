@@ -75,7 +75,8 @@ router.post('/login', (req, res) => {
             }
             var token = jwt.encode(payload, config.jwtSecret)
             res.json({
-              token: token
+              token: token,
+              user_id: user.id
             })
           } else {
             res.sendStatus(401)
