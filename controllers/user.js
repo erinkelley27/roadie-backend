@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
       res.json(users))
 })
 
-// User profile show page
+// User profile show page - do I need this?
 router.get('/:id', (req, res) => {
   console.log('user show page is working')
   User.findById(req.params.id)
